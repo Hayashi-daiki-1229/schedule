@@ -38,17 +38,3 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
-bin
-config
-db
-lib
-log
-node_modules
-public
-sqlite-autoconf-3290000
-sqlite-autoconf-3310100
-sqlite-autoconf-3340000
-storage
-test
-tmp
-vender
