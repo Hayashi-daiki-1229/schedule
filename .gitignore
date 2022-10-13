@@ -38,3 +38,6 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+sqlite-autoconf-3290000
+sqlite-autoconf-3310100
