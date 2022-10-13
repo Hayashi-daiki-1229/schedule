@@ -8,11 +8,11 @@
         </tr>
         <tr>
           <th><%= f.label :start ,"開始日" %></th>
-          <td><%= f.date_field:start %></td>
+          <td><%= f.date_field:start , min: Date.current%></td>
         </tr>
         <tr>
           <th><%= f.label :fin ,"終了日" %></th>
-          <td><%= f.date_field :fin %></td>
+          <td><%= f.date_field :fin , min: Date.current %></td>
         </tr>
         <tr>
           <th><%= f.label :all ,"終日" %></th>

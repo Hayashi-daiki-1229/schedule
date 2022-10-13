@@ -15,7 +15,9 @@
    </tr>
    <tr>
      <th>終日</th>
-     <td><%= @user.all %></td>
+     <td><%= if @user.all == true
+          "○" 
+          end %></td>
    </tr>
    <tr>
      <th>メモ</th>

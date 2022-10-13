@@ -18,14 +18,16 @@
     <%= yield %>
     
     <footer>
-      <%= time = Time.now %>
-      <%= year = time.year 
+      <%= time = Time.now
+      year = time.year 
       month = time.month
       day = time.day
       hour = time.hour 
       min = time.min 
-      sec = time.sec %>
-      <%= year.to_s + "年" + month.to_s + "月" + day.to_s + "日"+ hour.to_s + "時" + min.to_s + "分" + sec.to_s + "秒" %>
+      sec = time.sec
+      year.to_s + "年" + month.to_s + "月" + day.to_s + "日"+ hour.to_s + "時" + min.to_s + "分" + sec.to_s + "秒" %>
+      <%= schedule = User.count 
+      "スケジュール数" + schedule.to_s%>
     </footer>
   </body>
 </html>
