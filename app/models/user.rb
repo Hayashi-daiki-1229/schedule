@@ -1,13 +1,20 @@
 class User < ApplicationRecord
-  validates :title,presence:true
-  validates :start, presence: true
-  validates :fin, presence: true
-  validates :all, {acceptance: true}
-  validates :memo, length: { in: 10..30 }
-  validate :start_end_check
+   validates :title, presence: { message: "項目を入力してくだい" }
+   validates :start, presence: { message: "項目を入力してくだい" }
+   validates :fin, presence: { message: "項目を入力してくだい" }
+   validates :memo, presence: { message: "項目を入力してくだい" }
+   validate :start_end_check
+   validate :start_date_before_today
 
-  def start_end_check
-    errors.add(:fin, "は開始日より前の日付は登録できません。") unless
-    self.start < self.fin
-  end
+def start_end_check
+    if start.present? && fin.present? && start > fin
+        errors.add(:終了日,"は開始日より後の日付を入力してください")
+    end   
+end
+
+def start_date_before_today
+    if start.present? && fin.present? && start < Date.today
+        errors.add(:開始日,"は今日以降の日付で選択してください")
+    end
+end
 end
